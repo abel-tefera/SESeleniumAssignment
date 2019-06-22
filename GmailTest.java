@@ -22,9 +22,11 @@ public class GmailTest {
         WebDriver driver = new ChromeDriver();
         String url = "https://accounts.google.com/ServiceLogin/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=AddSession";
         driver.get(url);
-        driver.findElement(By.id("identifierId")).sendKeys("", Keys.ENTER);
+        // Enter email here
+        driver.findElement(By.id("identifierId")).sendKeys("EnterYourOwnAccount@gmail.com", Keys.ENTER);
         Thread.sleep(3000);
-        driver.findElement(By.name("password")).sendKeys("", Keys.ENTER);
+        // Enter password here
+        driver.findElement(By.name("password")).sendKeys("YourPassword", Keys.ENTER);
         Thread.sleep(4000);
 
         for (int j = 0; j < 15; j++) {
